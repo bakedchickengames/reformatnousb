@@ -15,7 +15,7 @@ Reformat from another partition without usb, skim through this doc for a general
 * Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. This file contains the information to skip the OOBE (Out-Of-Box Experience). Basically the steps where you enter username/password/time and date. You can skip it all using this.
 * Use DISM to unmount the install.wim. DISM will then apply and save the install.
 * You now have folder, for this example, C:\examplewindows which contains the extracted and modified windows.iso files. Save this folder for the future installs you wish to repeat
-* You'll be using the install.wim that you modified using DISM to install windows now
+* You'll be using the install.wim that you modified using DISM to install windows
 * Format a partition and install the unzipped iso (located, for this example, at C:\examplewindows\sources\install.wim) using DISM /Apply-Image to that partition.
 * Run bcdboot on that drive and it is ready to go
 
