@@ -11,7 +11,7 @@ reformat from another partition without usb
 **install.wim**
   1. this is the wim (Windows Image File) that you will ultimately use "DISM /Apply-Image" command to reformat a partition. Until then, you will modify the install.wim by
      1. mounting it (DISM's way of essentially unzipping it so it can modify it)
-        * Dism /Mount-Image /ImageFile:C:\test\images\myimage.wim /index:1 /MountDir:C:\test\offline
+        * ex: Dism /Mount-Image /ImageFile:C:\test\images\myimage.wim /index:1 /MountDir:C:\test\offline
           * /index:1 selecting the right windows version (e.g. home, pro, ultimate) later on when you run /Apply-Image to install windows onto a drive, you will specify the same index: that you mounted and modified here. look [**_here_**](https://www.tenforums.com/general-support/162980-what-index-number-how-do-i-find-thank-you-post2000764.html?s=ab6904756d100e190fc1593666d2cc3d#post2000764) for an example of how to view the indexes in install.wim and what it looks like
      2. modifying it (with DISM /Add-Driver to add drivers and /Apply-Unattend if you have any offlineServicing changes in the autoaunattend.xml file)
      3. unmounting it (to unmount and apply changes to the install.wim)
