@@ -5,7 +5,7 @@ Reformat from another partition without usb, skim through this doc for a general
 
 * DISM, install.wim, answer files (autounattend.xml unattend.xml)
   * DISM :THE cmd command you will to do everything with the install.wim  
-  * install.wim the file located in windows.iso hat contains the windows image files
+  * install.wim the file located in windows.iso that contains the windows image files
   * autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. I used them mostly to skip the username/password phase of the install (they call this the OOBE, or out of box experience).
 * Extract a windows.iso with 7zip into a folder. 
 * Use DISM to mount the install.wim (to some folder, located at for this example C:\testmount). 
