@@ -23,6 +23,7 @@ Reformat from another partition without usb, skim through this doc for a general
   1. This is the wim (Windows Image File) that you will ultimately use "DISM /Apply-Image" command to reformat a partition. Until then, you will modify the install.wim by
      1. Mounting it (DISM's way of essentially unzipping it so it can modify it)
         * ex: Dism /Mount-Image /ImageFile:C:\test\images\myimage.wim /index:1 /MountDir:C:\test\offline
+          * they call it offline as opposed to online. online means the windows install that is currently running. some DISM commands like /Add-Driver can only be done with an offline image. You would have to use devmgmt.msc to install drives to the current install you are running, the online install.
           * /index:1 since install.wim is a compressed file, they put inside it multiple versions of windows (home, pro, ultimate, etc.) the index indicates which one you want to select. Check [**_here_**](https://www.tenforums.com/general-support/162980-what-index-number-how-do-i-find-thank-you-post2000764.html?s=ab6904756d100e190fc1593666d2cc3d#post2000764) for an example of how to view the indexes in install.wim and what it looks like
      2. Modifying it (with DISM /Add-Driver to add drivers and /Apply-Unattend if you have any offlineServicing changes in the autoaunattend.xml file)
      3. Unmounting it (to unmount and apply changes to the install.wim)
