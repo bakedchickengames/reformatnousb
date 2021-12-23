@@ -18,7 +18,7 @@ reformat from another partition without usb
 
   2. **Explanation**  when you mount the install.wim and choose the index, you will specify a folder as the destination. inside that folder will look exactly like a C:\ drive of a fresh windows install. this is because the install.wim file is the DISM's method of compressing the windows.
 
-     asdf 
+     the install.wim will be in the sources folder of the mounted directory.
 
 autounattend.xml and unattend.xml
 
