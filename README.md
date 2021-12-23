@@ -8,12 +8,12 @@ Reformat from another partition without usb, skim through this doc for a general
   * install.wim the file located in windows.iso that contains the windows image files
   * autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. I used them mostly to skip the username/password phase of the install (they call this the OOBE, or out of box experience).
 * Extract a windows.iso with 7zip into a folder. 
-* Use DISM to mount the install.wim (to some folder, located at for this example C:\testmount). 
+* Use DISM to mount the install.wim (to some folder, located, for this example, at C:\testmount). 
 * Use DISM to /add-drivers or windows KB updates. 
 * Use DISM to apply an autounattend.xml with only offlineServicing (i only used this to turn the microsoft LUA settings off).  
-* Copy your unattend.xml to the Panther folder (located for this example at C:\Windows\Panther). You'll have to make the folder since it won't exist. 
+* Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. 
 * Use DISM to Unmount the install.wim. DISM will then apply and save the install. 
-* Format a partition and install the unzipped iso (that you just finished changing) using DISM /Apply-Image to that partition.
+* Format a partition and install the unzipped iso (located, for this example, at C:\testmount\sources\install.wim) using DISM /Apply-Image to that partition.
 * Run bcdboot on that drive and it is ready to go
 
 ## [DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism?view=windows-11)
@@ -45,6 +45,7 @@ I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/deskto
 
 * Autounattend.xml goes to the root of install media supposedly,
 * DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11)
-* Unattend.xml is copied into the %WINDIR%/Panther (for example if you extracted the install.wim to a test folder it would go to test\Windows\Panther)
+* Unattend.xml is copied into the %WINDIR%/Panther (for example if you mounted the install.wim to C:\testmount it would go to C:testmount\Windows\Panther)
+  [here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-setup-automation-overview?view=windows-11#implicit-answer-file-search-order) for more information on why Panther folder
 
 ## put example of what i did exact steps here later
