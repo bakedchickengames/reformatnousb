@@ -24,7 +24,7 @@ autounattend.xml and unattend.xml
 
 files used to automate settings in windows so you dont have to
 
-these are called answer files. the big differences to know is that they go in different places because they are used in different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) athe unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
+they call these answer files. the big differences to know is that they go in different places because they are used in different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) athe unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
 
 I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/wsim/windows-system-image-manager-technical-reference) in the windows adk to make an answer file (autounattend.xml and unattend.xml) you can use NTLite free version
 
