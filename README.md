@@ -6,13 +6,13 @@ Reformat from another partition without usb, skim through this doc for a general
 * DISM, install.wim, answer files (autounattend.xml unattend.xml)
   * DISM is THE cmd command you will to do everything with the install.wim  
   * install.wim the file located in windows.iso that contains the windows image files
-  * autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. I used them mostly to skip the username/password phase of the install (they call this the OOBE, or out of box experience).
+  * autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. I used them mostly to skip the username/password phase of the install (they call this the OOBE, or Out-Of-Box Experience).
 * Extract a windows.iso with 7zip into a folder. 
 * Use DISM to mount the install.wim (to some folder, located, for this example, at C:\testmount). 
 * Use DISM to /add-drivers or windows KB updates.
 * USE WSIM or NTLite to make autounattend.xml and unattend.xml files so they automate setting up more windows settings for you.
 * Use DISM to apply an autounattend.xml with only offlineServicing (i only used this to turn the microsoft LUA settings off).  
-* Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. 
+* Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. This file contains the information to skip the OOBE (Out-Of-Box Experience). Basically the steps where you enter username/password/time and date you can skip it all using this.
 * Use DISM to Unmount the install.wim. DISM will then apply and save the install. 
 * Format a partition and install the unzipped iso (located, for this example, at C:\testmount\sources\install.wim) using DISM /Apply-Image to that partition.
 * Run bcdboot on that drive and it is ready to go
