@@ -1,5 +1,5 @@
 # Reformatnousb
-Reformat from another partition without usb
+Reformat from another partition without usb, skim through this doc for a general understanding of how to get this done.
 
 ## General overview, links and explanations
 [DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism?view=windows-11)
