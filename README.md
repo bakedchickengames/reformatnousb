@@ -34,3 +34,5 @@ I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/deskto
 * Autounattend.xml goes to the root of install media supposedly,
 * DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11)
 * Unattend.xml is copied into the %WINDIR%/Panther (for example if you extracted the install.wim to a test folder it would go to test\Windows\Panther)
+
+put example of what i did exact steps here later
