@@ -12,7 +12,7 @@ Reformat from another partition without usb, skim through this doc for a general
 * Use DISM to /add-drivers or windows KB updates. 
 * Use DISM to apply an autounattend.xml with only offlineServicing (i only used this to turn the microsoft LUA settings off).  
 * Copy your unattend.xml to the Panther folder (located for this example at C:\Windows\Panther). You'll have to make the folder since it won't exist. 
-* Unmount the install.wim to apply and save the install. 
+* Use DISM to Unmount the install.wim. DISM will then apply and save the install. 
 * Format a partition and install the unzipped iso (that you just finished changing) using DISM /Apply-Image to that partition.
 * Run bcdboot on that drive and it is ready to go
 
