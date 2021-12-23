@@ -16,6 +16,8 @@ Reformat from another partition without usb, skim through this doc for a general
 * Format a partition and install the unzipped iso (located, for this example, at C:\testmount\sources\install.wim) using DISM /Apply-Image to that partition.
 * Run bcdboot on that drive and it is ready to go
 
+* rest of the doc will be giving more detailed explanations
+
 ## [DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism?view=windows-11)
 * [/Apply-Image](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11#apply-image)
 * [/Add-Driver](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-and-remove-drivers-to-an-offline-windows-image?view=windows-11)
