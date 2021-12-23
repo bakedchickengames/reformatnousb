@@ -1,7 +1,7 @@
-# reformatnousb
-reformat from another partition without usb
+# Reformatnousb
+Reformat from another partition without usb
 
-## general overview, links and explanations
+## General overview, links and explanations
 [DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism?view=windows-11)
 * [/Apply-Image](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11#apply-image)
 * [/Add-Driver](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-and-remove-drivers-to-an-offline-windows-image?view=windows-11)
@@ -18,16 +18,16 @@ reformat from another partition without usb
 
   2. **Explanation**  when you mount the install.wim and choose the index, you will specify a folder as the destination. inside that folder will look exactly like a C:\ drive of a fresh windows install. This is because the install.wim file is the DISM's method of compressing the windows.
 
-     the install.wim will be in the sources folder of the mounted directory.
+     The install.wim will be in the sources folder of the mounted directory.
 
-autounattend.xml and unattend.xml
+Autounattend.xml and unattend.xml
 
-files used to automate settings in windows so you dont have to
+Files used to automate settings in windows so you dont have to
 
-they call these answer files. The big differences to know is that they go in different places because they are used in different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. Autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) and the unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
+They call these answer files. The big differences to know is that they go in different places because they are used in different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. Autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) and the unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
 
 I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/wsim/windows-system-image-manager-technical-reference) in the windows adk to make an answer file (autounattend.xml and unattend.xml) you can use NTLite free version
 
-* autounattend.xml goes to the root of install media supposedly,
+* Autounattend.xml goes to the root of install media supposedly,
 * DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11)
-* unattend.xml is copied into the %WINDIR%/Panther (for example if you extracted the install.wim to a test folder it would go to test\Windows\Panther)
+* Unattend.xml is copied into the %WINDIR%/Panther (for example if you extracted the install.wim to a test folder it would go to test\Windows\Panther)
