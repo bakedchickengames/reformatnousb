@@ -3,7 +3,15 @@ Reformat from another partition without usb, skim through this doc for a general
 
 ## General overview, links and explanations
 
-DISM is THE cmd command you will to do everything with the install.wim (the thing that contains the windows image files). autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. i used them mostly to skip the username/password phase of the install (they call this the OOBE, or out of box experience). You  extract a windows.iso with 7zip into a folder. Then you mount the install.wim using DISM to /add-drivers or KB updates. Then you use DISM to apply an autounattend.xml with only offlineServicing (i only used this to turn the microsoft LUA settings off). Then you make a folder in the folder DISM mounted the install.wim to called Windows\Panther. Then you copy your unattend.xml into that Windows\Panther folder. Then you unmount the install.wim to apply and save the install. Then you format a partition and install the unzipped iso (that you just finished changing) using DISM /Apply-Image to that partition. run bcdboot on that drive and it is ready to go
+* DISM is THE cmd command you will to do everything with the install.wim (the thing that contains the windows image files). autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. I used them mostly to skip the username/password phase of the install (they call this the OOBE, or out of box experience).
+* Extract a windows.iso with 7zip into a folder. 
+* Use DISM to mount the install.wim (to some folder, located at for this example C:\testmount). 
+* Use DISM to /add-drivers or KB updates. 
+* Use DISM to apply an autounattend.xml with only offlineServicing (i only used this to turn the microsoft LUA settings off).  
+* Copy your unattend.xml to the Panther folder (located for this example at C:\Windows\Panther). You'll have to make the folder since it won't exist. 
+* Unmount the install.wim to apply and save the install. 
+* Format a partition and install the unzipped iso (that you just finished changing) using DISM /Apply-Image to that partition.
+* Run bcdboot on that drive and it is ready to go
 
 [DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism?view=windows-11)
 * [/Apply-Image](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11#apply-image)
