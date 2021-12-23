@@ -1,7 +1,7 @@
 # Reformatnousb
 Reformat from another partition without usb, skim through this doc for a general understanding of how to get this done.
 
-## General overview, links and explanations
+## General overview
 
 * DISM is THE cmd command you will to do everything with the install.wim (the thing that contains the windows image files). autounattend.xml and unattend.xml are used to make windows automatically configure a wide range of settings without you touching it. I used them mostly to skip the username/password phase of the install (they call this the OOBE, or out of box experience).
 * Extract a windows.iso with 7zip into a folder. 
