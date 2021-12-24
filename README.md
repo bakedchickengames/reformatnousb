@@ -20,7 +20,7 @@ OTHER LINKS [**1**](https://github.com/iidanL/InstallWindowsWithoutUSB/blob/main
 * Use DISM to mount the install.wim (to some folder, located, for this example, at C:\testmount). 
 * Use DISM to /add-drivers or windows KB updates.
 * USE WSIM or NTLite to make autounattend.xml and unattend.xml files so they automate setting up more windows settings for you.
-* ?Use DISM to apply an autounattend.xml? im not really sure about this part. see below. ?this file automates everything before the OOBE?  
+* ?Use DISM to apply an autounattend.xml? im not really sure about this part. see below. ?this file automates everything before the OOBE? See autounattend.xml below for more info
 * Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. This file contains the information to skip the OOBE (Out-Of-Box Experience). Basically the steps where you enter username/password/time and date. You can skip it all using this.
 * Use DISM to unmount the install.wim. DISM will then apply and save the install.
 * You now have folder, for this example, C:\examplewindows which contains the extracted and modified windows.iso files. Save this folder for the future installs you wish to repeat
