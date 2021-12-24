@@ -11,7 +11,7 @@ Reformat from another partition without usb, skim through this doc for a general
 * Use DISM to mount the install.wim (to some folder, located, for this example, at C:\testmount). 
 * Use DISM to /add-drivers or windows KB updates.
 * USE WSIM or NTLite to make autounattend.xml and unattend.xml files so they automate setting up more windows settings for you.
-* Use DISM to apply an autounattend.xml this file automates everything before the OOBE.  
+* ?Use DISM to apply an autounattend.xml? im not really sure about this part. see below. ?this file automates everything before the OOBE?  
 * Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. This file contains the information to skip the OOBE (Out-Of-Box Experience). Basically the steps where you enter username/password/time and date. You can skip it all using this.
 * Use DISM to unmount the install.wim. DISM will then apply and save the install.
 * You now have folder, for this example, C:\examplewindows which contains the extracted and modified windows.iso files. Save this folder for the future installs you wish to repeat
@@ -49,8 +49,8 @@ These are called answer files. The big difference between the two is that they g
 
 I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/wsim/windows-system-image-manager-technical-reference) in the Windows ADK to make an answer file (autounattend.xml and unattend.xml) you can use NTLite free version
 
-* Autounattend.xml goes to the root of install media supposedly,
-* DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" for ONLINE installs [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11). For me, I used it on offline installs (windows that aren't currently running or operating), so i put all the Windows Setup related things in it.
+* Autounattend.xml goes to the root of install media supposedly, i just used dism to apply it. TBH I don't really know what im doing. i just know where the unattend.xml is supposed to go. Using DISM on a file called autounattend.xml im not sure is even right [read more here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-unattended-servicing-command-line-options?view=windows-11)
+* DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" for ONLINE installs [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11).
 * Unattend.xml is copied into the %WINDIR%/Panther (for example if you mounted the install.wim to C:\testmount it would go to C:testmount\Windows\Panther)
   [here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-setup-automation-overview?view=windows-11#implicit-answer-file-search-order) for more information on why Panther folder
 
