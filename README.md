@@ -72,7 +72,7 @@ DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\Samsung_NVMe\s
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\usb\iusb3hub.inf"
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\usb\iusb3xhc.inf"
 
-::I integrated the windows kb4474419 update to get the driver signatures to be recognized. Otherwise I would do it every install. Without this update I can't install nvidia drivers and my aquantia driver won't work because it has to verify the driver signature since it needs this update for some SHA thing related to it. I don't really know exactly. I just know I need this and I can integrate it with DISM.
+::This is convenience for me. As opposed to a necessary step, like my windows 7 drivers for my particular motherboard. I integrated the windows kb4474419 update to get the driver signatures to be recognized. Otherwise I would do it manually every install. Without this update I can't install nvidia drivers and my aquantia driver won't work because it has to verify the driver signature since it needs this update for some SHA thing related to it. I don't really know exactly. I just know I need this and I can integrate it with DISM instead of manually each time i install.
 DISM /Image:D:\test /Add-Package /PackagePath:"D:\shove onto usb\windows6.1-kb4474419-v3-x64_b5614c6cea5cb4e198717789633dca16308ef79c.msu"
 
 ::this is to turn LUA off
