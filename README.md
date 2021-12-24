@@ -56,9 +56,13 @@ I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/deskto
 
 ## put example of what I did with exact steps, will add images here later
 ```
+::extract the iso file with 7z
+7z.exe x -y -oD:\win7 "D:\win7\Win7_Ult_SP1_English_x64.iso"
+
 ::index4 is win7 ultimate
 ::this is to open up the install.wim into a folder called test so i can modify it using DISM
 DISM /Mount-Image /ImageFile:D:\win7\sources\install.wim /Index:4 /MountDir:D:\test
+
 ::i added my aquantia ethernet driver, asmedia usb drivers, the nvme samsung 960 evo driver, and the usb 3.0 drivers to the install.wim since my z370 maximus x apex doesnt work with the default windows 7 drivers.
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\aq620\aqnic620.inf"
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\asmedia\asmthub3.inf"
@@ -66,18 +70,17 @@ DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\asmedia\asmtxh
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\Samsung_NVMe\secnvme.inf"
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\usb\iusb3hub.inf"
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\usb\iusb3xhc.inf"
+
 ::I integrated the windows kb4474419 update to get the driver signatures to be recognized. Otherwise I would do it every install. Without this update I can't install nvidia drivers and my aquantia driver won't work because it has to verify the driver signature since it needs this update for some SHA thing related to it. I don't really know exactly. I just know I need this and I can integrate it with DISM.
 DISM /Image:D:\test /Add-Package /PackagePath:"D:\shove onto usb\windows6.1-kb4474419-v3-x64_b5614c6cea5cb4e198717789633dca16308ef79c.msu"
 
 ::this is to turn LUA off
 DISM /Image:D:\test /Apply-Unattend:D:\autounattend.xml
+
 ::this is to save the changes i did
 DISM /Unmount-Image /MountDir:D:\test /Commit
 ```
 ```
-::extract the iso file with 7z
-7z.exe x -y -oD:\win7 "D:\win7\Win7_Ult_SP1_English_x64.iso"
-
 ::this is the line that installed windows 7 on my E drive
 DISM /Apply-Image /ImageFile:D:\win7\sources\install.wim /Index:4 /ApplyDir:E:\
 
