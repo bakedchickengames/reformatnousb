@@ -101,8 +101,9 @@ bcdboot E:\Windows
 <details>
 <summary>my autounattend.xml and unattend.xml (i used the same file since i wasnt really sure about the autounattend.xml situation)</summary>
 
-will upload later for now images
-FOR what i did personally on my windows 7. the following images are the settings used to skip username/password. I placed the unattend.xml file in %WINDIR%\Panther before first boot
+[autounattend.xml](https://github.com/bakedchickengames/reformatnousb/blob/main/autounattend.xml) [unattend.xml](https://github.com/bakedchickengames/reformatnousb/blob/main/unattend.xml)
+
+images FOR what i did personally on my windows 7. the following images are the settings used to skip username/password. I placed the unattend.xml file in %WINDIR%\Panther before first boot
 I will show 2 images for the first setting.
  * first will be how i added it to the unattend.xml (finding the relevant setting in the bottom left "Windows Image" section
  * second will be what i entered in the "Answer File section"
