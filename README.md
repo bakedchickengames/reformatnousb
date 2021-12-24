@@ -64,7 +64,7 @@ I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/deskto
 ::this is to open up the install.wim into a folder called test so I can modify it using DISM
 DISM /Mount-Image /ImageFile:D:\win7\sources\install.wim /Index:4 /MountDir:D:\test
 
-::i added my aquantia ethernet driver, asmedia usb drivers, the nvme samsung 960 evo driver, and the usb 3.0 drivers to the install.wim since my z370 maximus x apex doesnt work with the default windows 7 drivers.
+::these commands are for modifying the mounted install.wim. I added my aquantia ethernet driver, asmedia usb drivers, the nvme samsung 960 evo driver, and the usb 3.0 drivers to the install.wim since my z370 maximus x apex doesnt work with the default windows 7 drivers.
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\aq620\aqnic620.inf"
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\asmedia\asmthub3.inf"
 DISM /Image:D:\test /Add-Driver /Driver:"D:\shove onto usb\driver\asmedia\asmtxhci.inf"
