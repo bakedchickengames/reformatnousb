@@ -43,7 +43,7 @@ Reformat from another partition without usb, skim through this doc for a general
 
 ## Autounattend.xml and unattend.xml
 
-Files used to automate settings in windows so you dont have to. they just have to be placed in the right place
+Files used to automate setting up settings in windows so you dont have to. they just have to be placed in the right place
 
 They call these answer files. The big differences to know is that they go in different places because they are used in different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. Autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) and the unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
 
