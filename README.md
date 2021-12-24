@@ -115,22 +115,22 @@ This is some generic product key to just skip this step [here](https://docs.micr
 For some reason to skip product key section you have to add it in this section here. Also for some reason the Computer Name is placed here. Probably because it applies to the entire computer its not set in the OOBE. [Type a computer name](https://i.imgur.com/dBi1Znf.png) that's the part it skips
 </details>
 <details>
- </summary>skipping Language section<summary>
+ <summary>skipping Language section</summary>
 
 ![2](https://i.imgur.com/yHiP1bg.png)
 </details>
 <details>
- </summary>skipping time zone setup<summary>
+ <summary>skipping time zone setup</summary>
 
 ![2](https://i.imgur.com/yV3vseQ.png)
 </details>
 <details>
- </summary>skipping EULA page, network location setup, and some [protect your pc](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-oobe-protectyourpc) setting im not even sure is in win7<summary>
+ <summary>skipping EULA page, network location setup, and some [protect your pc](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-oobe-protectyourpc) setting im not even sure is in win7</summary>
 
 ![2](https://i.imgur.com/CfjrD7R.png)
 </details>
 <details>
- </summary>skip the account setup phase<summary>
+ <summary>skip the account setup phase</summary>
 
 ![2](https://i.imgur.com/CfjrD7R.png) ![password section](https://i.imgur.com/7On3nq9.png)
 </details>
@@ -143,7 +143,7 @@ changing the defaultthemesoff will make it create a new theme with classic. the 
  </details>
 
 <details>
- </summary>ill show the rest of the Window PE configuration pass i did, but im pretty sure this did nothing for me<summary>
+ <summary>ill show the rest of the Window PE configuration pass i did, but im pretty sure this did nothing for me</summary>
 
 ![image](https://user-images.githubusercontent.com/34696110/147355548-b9b987e0-6354-43b8-843a-d335f93f004f.png)
 ![image](https://user-images.githubusercontent.com/34696110/147355561-1afd79c4-1438-48af-b828-7723c250bd7b.png)
