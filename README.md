@@ -1,5 +1,6 @@
 # Reformatnousb
 Reformat from another partition without usb, skim through this doc for a general understanding of how to get this done.
+OTHER LINKS [**1**](https://github.com/iidanL/InstallWindowsWithoutUSB/blob/main/Install%20Windows.bat) [**2**](https://superuser.com/questions/193912/install-windows-7-x64-from-a-separate-partition-on-same-hard-drive-no-dvd-usb) [**3**](https://www.tenforums.com/tutorials/84331-apply-windows-image-using-dism-instead-clean-install.html)
 
 ## General overview
 * Check example at bottom to see an example. I posted the exact commands I used.
