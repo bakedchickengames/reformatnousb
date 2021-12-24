@@ -4,6 +4,12 @@ OTHER LINKS [**1**](https://github.com/iidanL/InstallWindowsWithoutUSB/blob/main
 
 ## General overview
 * Check example at bottom to see an example. I posted the exact commands I used.
+* If you only care about installing the iso with no extra steps:
+  * Extract iso using 7zip. It is now in a folder ex: C:\examplewindows.
+  * DISM /Apply-Image /ImageFile:C:\examplewindows\sources\install.wim /Index:4 /ApplyDir:E:\
+    * Index:4 is my win7 Ultimate, /ApplyDir:E:\ is the partition i want to install the windows on
+  * You must be on a different partition to do these 2 steps. Then you are done. Rest of guide is for adding drivers and automating the username and password (OOBE)
+
 * important terms: DISM, install.wim, autounattend.xml unattend.xml (answer files)
   * DISM is THE cmd command you will to do everything with the install.wim  
   * install.wim the file located in windows.iso that contains the windows image files
