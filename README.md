@@ -60,7 +60,7 @@ I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/deskto
 ::extract the iso file with 7z
 7z.exe x -y -oD:\win7 "D:\win7\Win7_Ult_SP1_English_x64.iso"
 
-::index4 is win7 ultimate
+::index4 is win7 ultimate for my particular install.wim
 ::this is to open up the install.wim into a folder called test so I can modify it using DISM
 DISM /Mount-Image /ImageFile:D:\win7\sources\install.wim /Index:4 /MountDir:D:\test
 
