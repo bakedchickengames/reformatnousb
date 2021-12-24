@@ -107,7 +107,7 @@ I will show 2 images for the first setting.
  * first will be how i added it to the unattend.xml (finding the relevant setting in the bottom left "Windows Image" section
  * second will be what i entered in the "Answer File section"
 Afterwards you can just see the configuration pass by looking at the "Answer File" section i.e. Microsoft-Windows-Shell-Setup is under 4 specialize. so to add that into the "Answer File" section you would right click Microsoft-Windows-Shell-Setup in the "Windows Image" section and select "Add Setting to Pass 4 specialize"
- <details>
+<details>
  <summary>computer name and Product Key</summary>
 
 This is some generic product key to just skip this step [here](https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys) to find yours
@@ -121,10 +121,12 @@ For some reason to skip product key section you have to add it in this section h
 </details>
 <details>
  </summary>skipping time zone setup<summary>
+
 ![2](https://i.imgur.com/yV3vseQ.png)
 </details>
 <details>
  </summary>skipping EULA page, network location setup, and some [protect your pc](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-oobe-protectyourpc) setting im not even sure is in win7<summary>
+
 ![2](https://i.imgur.com/CfjrD7R.png)
 </details>
 <details>
