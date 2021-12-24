@@ -56,6 +56,7 @@ I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/deskto
 
 ## put example of what I did with exact steps, will add images here later
 ```
+::all these commands are done in cmd administrator
 ::extract the iso file with 7z
 7z.exe x -y -oD:\win7 "D:\win7\Win7_Ult_SP1_English_x64.iso"
 
@@ -81,6 +82,7 @@ DISM /Image:D:\test /Apply-Unattend:D:\autounattend.xml
 DISM /Unmount-Image /MountDir:D:\test /Commit
 ```
 ```
+::all these commands done in cmd administrator
 ::this is the line that installed windows 7 on my E drive
 DISM /Apply-Image /ImageFile:D:\win7\sources\install.wim /Index:4 /ApplyDir:E:\
 
