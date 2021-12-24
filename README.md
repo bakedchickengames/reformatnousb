@@ -106,12 +106,13 @@ I will show 2 images for each setting.
  * first will be how i added it to the unattend.xml (finding the relevant setting in the bottom left "Windows Image" section
  * second will be what i entered in the "Answer File section"
 <details>
- </summary>computer name and Product Key<summary>
+ <summary>computer name and Product Key</summary>
 this is some generic product key to just skip this step [here](https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys) to find yours
-</details>
 ![1](https://i.imgur.com/DHGlICO.png) ![2] (https://i.imgur.com/gAW1knm.png)
 </details>
+</details>
+
 
 <details>
- </summary><summary>
+ </summary>asdf<summary>
 </details>
