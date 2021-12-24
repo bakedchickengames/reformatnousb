@@ -129,11 +129,12 @@ For some reason to skip product key section you have to add it in this section h
 </details>
 <details>
  </summary>skip the account setup phase<summary>
-![2](https://i.imgur.com/CfjrD7R.png) ![password section](https://i.imgur.com/7On3nq9.png)
 
+![2](https://i.imgur.com/CfjrD7R.png) ![password section](https://i.imgur.com/7On3nq9.png)
 </details>
 <details>
  <summary>rest of the features i changed </summary>
+
 ![image](https://user-images.githubusercontent.com/34696110/147355641-a7cdcb7c-f015-45d2-bcee-6650b8efe599.png)
 ![image](https://user-images.githubusercontent.com/34696110/147355647-f8f44db4-efbf-4e15-9931-72a2bf68cb3c.png)
 changing the defaultthemesoff will make it create a new theme with classic. the first ease of access theme. ThemeName is where you put the location of the theme you want to use. ex: "C:\Windows\resources\Ease of Access Themes\classic.theme"
@@ -141,6 +142,7 @@ changing the defaultthemesoff will make it create a new theme with classic. the 
 
 <details>
  </summary>ill show the rest of the Window PE configuration pass i did, but im pretty sure this did nothing for me<summary>
+
 ![image](https://user-images.githubusercontent.com/34696110/147355548-b9b987e0-6354-43b8-843a-d335f93f004f.png)
 ![image](https://user-images.githubusercontent.com/34696110/147355561-1afd79c4-1438-48af-b828-7723c250bd7b.png)
 ![image](https://user-images.githubusercontent.com/34696110/147355573-00b46e80-1abb-47f5-9bcb-6101019a7801.png)
