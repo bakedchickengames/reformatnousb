@@ -2,7 +2,7 @@
 Reformat from another partition without usb, skim through this doc for a general understanding of how to get this done.
 
 ## General overview
-
+* Check example at bottom to see an example. I posted the exact commands I used.
 * DISM, install.wim, answer files (autounattend.xml unattend.xml)
   * DISM is THE cmd command you will to do everything with the install.wim  
   * install.wim the file located in windows.iso that contains the windows image files
