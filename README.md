@@ -102,13 +102,15 @@ bcdboot E:\Windows
 <summary>my autounattend.xml and unattend.xml (i used the same file since i wasnt really sure about the autounattend.xml situation)</summary>
 will upload later for now images
 FOR what i did personally on my windows 7. the following images are the settings used to skip username/password. I placed the unattend.xml file in %WINDIR%\Panther before first boot
-I will show 2 images for each setting.
+I will show 2 images for the first setting.
  * first will be how i added it to the unattend.xml (finding the relevant setting in the bottom left "Windows Image" section
  * second will be what i entered in the "Answer File section"
+Afterwards you can just see the configuration pass by looking at the "Answer File" section i.e. Microsoft-Windows-Shell-Setup is under 4 specialize. so to add that into the "Answer File" section you would right click Microsoft-Windows-Shell-Setup in the "Windows Image" section and select "Add Setting to Pass 4 specialize"
 <details>
  <summary>computer name and Product Key</summary>
-this is some generic product key to just skip this step [here](https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys) to find yours
+This is some generic product key to just skip this step [here](https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys) to find yours
 [1](https://i.imgur.com/DHGlICO.png) [2] (https://i.imgur.com/gAW1knm.png)
+For some reason to skip product key section you have to add it in this section here. Also for some reason the Computer Name is placed here. Probably because it applies to the entire computer its not set in the OOBE. [Type a computer name](https://i.imgur.com/dBi1Znf.png) that's the part it skips
 </details>
 </details>
 
