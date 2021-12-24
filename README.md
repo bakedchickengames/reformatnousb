@@ -126,8 +126,9 @@ For some reason to skip product key section you have to add it in this section h
 ![2](https://i.imgur.com/yV3vseQ.png)
 </details>
 <details>
- <summary>skipping EULA page, network location setup, and some [protect your pc](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-oobe-protectyourpc) setting im not even sure is in win7</summary>
+ <summary>skipping EULA page, network location setup, and some protect your pc setting im not even sure is in win7</summary>
 
+[protect your pc](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-oobe-protectyourpc)
 ![2](https://i.imgur.com/CfjrD7R.png)
 </details>
 <details>
