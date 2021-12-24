@@ -16,7 +16,7 @@ Reformat from another partition without usb, skim through this doc for a general
 * Use DISM to unmount the install.wim. DISM will then apply and save the install.
 * You now have folder, for this example, C:\examplewindows which contains the extracted and modified windows.iso files. Save this folder for the future installs you wish to repeat
 * You'll be using the install.wim that you modified using DISM to install windows
-* Format a partition and install the unzipped iso (located, for this example, at C:\examplewindows\sources\install.wim) using DISM /Apply-Image to that partition.
+* Format a partition and install the unzipped and now modified iso (located, for this example, at C:\examplewindows\sources\install.wim) using DISM /Apply-Image to that partition.
 * Run bcdboot on that drive and it is ready to go
 
 * rest of the doc will be giving more detailed explanations
