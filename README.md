@@ -56,7 +56,7 @@ Files used to automate setting up settings in windows so you dont have to. they 
 
 These are called answer files. The big difference between the two is that they go in different places because they are usedto automate different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. Autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) and the unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
 
-I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/wsim/windows-system-image-manager-technical-reference) in the Windows ADK to make an answer file (autounattend.xml and unattend.xml) you can use NTLite free version
+I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/wsim/windows-system-image-manager-technical-reference) in the Windows ADK to make an answer file (autounattend.xml and unattend.xml) you can use NTLite free version  [image of me installing wsim](https://i.imgur.com/UiTzA3v.png)
 
 * Autounattend.xml goes to the root of install media supposedly, i just used dism to apply it. TBH I don't really know what im doing. i just know where the unattend.xml is supposed to go. Using DISM on a file called autounattend.xml im not sure is even right [read more here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-unattended-servicing-command-line-options?view=windows-11)
 * DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" for ONLINE installs [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11).
@@ -98,3 +98,88 @@ DISM /Apply-Image /ImageFile:D:\win7\sources\install.wim /Index:4 /ApplyDir:E:\
 ::this adds boot info to the system partition so you can boot to it
 bcdboot E:\Windows
 ```
+<details>
+<summary>my autounattend.xml and unattend.xml (i used the same file since i wasnt really sure about the autounattend.xml situation)</summary>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="offlineServicing">
+        <component name="Microsoft-Windows-LUA-Settings" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <EnableLUA>false</EnableLUA>
+        </component>
+    </settings>
+    <settings pass="windowsPE">
+        <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SetupUILanguage>
+                <UILanguage>en-US</UILanguage>
+            </SetupUILanguage>
+            <InputLocale>en-US</InputLocale>
+            <SystemLocale>en-US</SystemLocale>
+            <UILanguage>en-US</UILanguage>
+            <UserLocale>en-US</UserLocale>
+        </component>
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <UserData>
+                <ProductKey>
+                    <Key>D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV</Key>
+                </ProductKey>
+                <AcceptEula>true</AcceptEula>
+                <Organization>LIA</Organization>
+                <FullName>LIANG</FullName>
+            </UserData>
+        </component>
+    </settings>
+    <settings pass="oobeSystem">
+        <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <InputLocale>en-US</InputLocale>
+            <UILanguage>en-US</UILanguage>
+            <UserLocale>en-US</UserLocale>
+            <SystemLocale>en-US</SystemLocale>
+        </component>
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <UserAccounts>
+                <LocalAccounts>
+                    <LocalAccount wcm:action="add">
+                        <Password>
+                            <Value>MQAyADMANABxAHcAZQByAFAAYQBzAHMAdwBvAHIAZAA=</Value>
+                            <PlainText>false</PlainText>
+                        </Password>
+                        <DisplayName>admin</DisplayName>
+                        <Group>Administrators</Group>
+                        <Name>tesla432</Name>
+                        <Description>PC</Description>
+                    </LocalAccount>
+                </LocalAccounts>
+            </UserAccounts>
+            <OOBE>
+                <HideEULAPage>true</HideEULAPage>
+                <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+                <NetworkLocation>Other</NetworkLocation>
+                <ProtectYourPC>3</ProtectYourPC>
+            </OOBE>
+            <TimeZone>Pacific Standard Time</TimeZone>
+            <VisualEffects>
+                <FontSmoothing>Off</FontSmoothing>
+            </VisualEffects>
+            <Themes>
+                <ThemeName></ThemeName>
+                <DefaultThemesOff>true</DefaultThemesOff>
+            </Themes>
+        </component>
+    </settings>
+    <settings pass="specialize">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ComputerName>PC</ComputerName>
+            <ProductKey>D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV</ProductKey>
+            <WindowsFeatures>
+                <ShowWindowsMediaPlayer>false</ShowWindowsMediaPlayer>
+                <ShowInternetExplorer>false</ShowInternetExplorer>
+                <ShowMediaCenter>false</ShowMediaCenter>
+            </WindowsFeatures>
+        </component>
+    </settings>
+    <cpi:offlineImage cpi:source="wim:d:/mounted%20image%20for%20wsim/sources/install.wim#Windows 7 ULTIMATE" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+</unattend>
+
+```
+</details>
