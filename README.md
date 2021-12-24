@@ -100,4 +100,18 @@ bcdboot E:\Windows
 ```
 <details>
 <summary>my autounattend.xml and unattend.xml (i used the same file since i wasnt really sure about the autounattend.xml situation)</summary>
+will upload later for now images
+FOR what i did personally on my windows 7. the following images are the settings used to skip username/password. I placed the unattend.xml file in %WINDIR%\Panther before first boot
+I will show 2 images for each setting.
+ * first will be how i added it to the unattend.xml (finding the relevant setting in the bottom left "Windows Image" section
+ * second will be what i entered in the "Answer File section"
+<details>
+ </summary>computer name and Product Key<summary>
+this is some generic product key to just skip this step [here](https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys) to find yours
+</details>
+![1](https://i.imgur.com/DHGlICO.png) ![2] (https://i.imgur.com/gAW1knm.png)
+</details>
+
+<details>
+ </summary><summary>
 </details>
