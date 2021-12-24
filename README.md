@@ -11,7 +11,7 @@ Reformat from another partition without usb, skim through this doc for a general
 * Use DISM to mount the install.wim (to some folder, located, for this example, at C:\testmount). 
 * Use DISM to /add-drivers or windows KB updates.
 * USE WSIM or NTLite to make autounattend.xml and unattend.xml files so they automate setting up more windows settings for you.
-* Use DISM to apply an autounattend.xml with only offlineServicing (i only used this to turn the microsoft LUA settings off).  
+* Use DISM to apply an autounattend.xml this file automates everything before the OOBE.  
 * Copy your unattend.xml to the Panther folder (located, for this example, at C:\testmount\Windows\Panther). You'll have to make the folder since it won't exist. This file contains the information to skip the OOBE (Out-Of-Box Experience). Basically the steps where you enter username/password/time and date. You can skip it all using this.
 * Use DISM to unmount the install.wim. DISM will then apply and save the install.
 * You now have folder, for this example, C:\examplewindows which contains the extracted and modified windows.iso files. Save this folder for the future installs you wish to repeat
@@ -45,12 +45,12 @@ Reformat from another partition without usb, skim through this doc for a general
 
 Files used to automate setting up settings in windows so you dont have to. they just have to be placed in the right place
 
-They call these answer files. The big differences to know is that they go in different places because they are used in different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. Autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) and the unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
+These are called answer files. The big difference between the two is that they go in different places because they are usedto automate different parts of the reformat process. [here](https://win10.guru/answer-file-autounattend-xml-or-unattend-xml/) for info. Autounattend is for Windows Setup (the part where you can delete and partition drives, format them and choose which drive to install windows to) and the unattend is for what they call OOBE (the part where you enter your username and password after the computer finishes Windows Setup and reboots)
 
 I used [WSIM](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/wsim/windows-system-image-manager-technical-reference) in the Windows ADK to make an answer file (autounattend.xml and unattend.xml) you can use NTLite free version
 
 * Autounattend.xml goes to the root of install media supposedly,
-* DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11)
+* DISM /Apply-Unattend used on an autounattend.xml should only have what they call the offlineServicing "configuration pass" for ONLINE installs [explanation here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/how-configuration-passes-work?view=windows-11). For me, I used it on offline installs (windows that aren't currently running or operating), so i put all the Windows Setup related things in it.
 * Unattend.xml is copied into the %WINDIR%/Panther (for example if you mounted the install.wim to C:\testmount it would go to C:testmount\Windows\Panther)
   [here](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-setup-automation-overview?view=windows-11#implicit-answer-file-search-order) for more information on why Panther folder
 
