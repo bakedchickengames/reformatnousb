@@ -107,16 +107,47 @@ I will show 2 images for the first setting.
  * first will be how i added it to the unattend.xml (finding the relevant setting in the bottom left "Windows Image" section
  * second will be what i entered in the "Answer File section"
 Afterwards you can just see the configuration pass by looking at the "Answer File" section i.e. Microsoft-Windows-Shell-Setup is under 4 specialize. so to add that into the "Answer File" section you would right click Microsoft-Windows-Shell-Setup in the "Windows Image" section and select "Add Setting to Pass 4 specialize"
-<details>
+ <details>
  <summary>computer name and Product Key</summary>
 
 This is some generic product key to just skip this step [here](https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys) to find yours
-[1](https://i.imgur.com/DHGlICO.png) [2] (https://i.imgur.com/gAW1knm.png)
+![1](https://i.imgur.com/Zbb1JqE.png) ![2](https://i.imgur.com/gAW1knm.png)
 For some reason to skip product key section you have to add it in this section here. Also for some reason the Computer Name is placed here. Probably because it applies to the entire computer its not set in the OOBE. [Type a computer name](https://i.imgur.com/dBi1Znf.png) that's the part it skips
 </details>
-</details>
+<details>
+ </summary>skipping Language section<summary>
 
+![2](https://i.imgur.com/yHiP1bg.png)
+</details>
+<details>
+ </summary>skipping time zone setup<summary>
+![2](https://i.imgur.com/yV3vseQ.png)
+</details>
+<details>
+ </summary>skipping EULA page, network location setup, and some [protect your pc](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-oobe-protectyourpc) setting im not even sure is in win7<summary>
+![2](https://i.imgur.com/CfjrD7R.png)
+</details>
+<details>
+ </summary>skip the account setup phase<summary>
+![2](https://i.imgur.com/CfjrD7R.png) ![password section](https://i.imgur.com/7On3nq9.png)
+
+</details>
+<details>
+ <summary>rest of the features i changed </summary>
+![image](https://user-images.githubusercontent.com/34696110/147355641-a7cdcb7c-f015-45d2-bcee-6650b8efe599.png)
+![image](https://user-images.githubusercontent.com/34696110/147355647-f8f44db4-efbf-4e15-9931-72a2bf68cb3c.png)
+changing the defaultthemesoff will make it create a new theme with classic. the first ease of access theme. ThemeName is where you put the location of the theme you want to use. ex: "C:\Windows\resources\Ease of Access Themes\classic.theme"
+ </details>
 
 <details>
- </summary>asdf<summary>
+ </summary>ill show the rest of the Window PE configuration pass i did, but im pretty sure this did nothing for me<summary>
+![image](https://user-images.githubusercontent.com/34696110/147355548-b9b987e0-6354-43b8-843a-d335f93f004f.png)
+![image](https://user-images.githubusercontent.com/34696110/147355561-1afd79c4-1438-48af-b828-7723c250bd7b.png)
+![image](https://user-images.githubusercontent.com/34696110/147355573-00b46e80-1abb-47f5-9bcb-6101019a7801.png)
+![image](https://user-images.githubusercontent.com/34696110/147355577-c740b712-0618-4354-aa94-4101f9b18522.png)
+![image](https://user-images.githubusercontent.com/34696110/147355582-1e30975e-b247-4c77-804b-bd3e33d83497.png)
+
 </details>
+
+</details>
+
